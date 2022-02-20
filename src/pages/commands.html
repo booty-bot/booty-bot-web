@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../assets/favicon.ico">
+    <!-- Special font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <!-- End special font -->
+    <title>Booty Bot</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid container">
+            <a class="navbar-brand" href="/">
+                <img src="../assets/bot.jpg" alt="" width="50" height="50" class="rounded-circle"> &nbsp;
+                <span style="font-family: 'Permanent Marker', cursive; font-weight: 400;">Booty Bot</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#/">Commands</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="linksdrop" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Links
+                        </a>
+                        <ul class="dropdown-menu bgn" aria-labelledby="linksdrop">
+                            <li><a class="dropdown-item text-muted font-weight-bold" href="" target="_blank">Invite
+                                    Bot</a>
+                            </li>
+                            <li><a class="dropdown-item text-muted font-weight-bold" href="" target="_blank">Support
+                                    Server</a></li>
+                            <!-- <li><a class="dropdown-item text-muted font-weight-bold" href="./faq.html">FAQ</a></li> -->
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-muted font-weight-bold"
+                                    href="https://github.com/TODO" target="_blank">Official Github</a></li>
+                            <!-- <li><a class="dropdown-item text-muted font-weight-bold" href="">View
+                                    Documentation</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex ml-auto" id="headerlogin">
+                    <li class="nav-item" style="list-style: none;">
+                        <a class="nav-link btn btn-outline-secondary login" href="./donate">Donate</a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </div>
+
+    <div class="jumbotron text-center bg-transparent">
+        <h1 class="commandstitle">Commands</h1>
+        <p class="lead commandssub">View the commands for <span style="font-family: 'Permanent Marker', cursive; font-weight: 400;">Booty Bot</span>.</p>
+        <hr>
+        <input id="myInput" type="text" class="searchbox" placeholder="Search">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="border"></div>
+        <br>
+        <br>
+        <br>
+        <div id="myCmd">
+            <br>
+            <button type="button" class="collapsible">!gimmedabutt<span> - Posts a random butt image/gif from the interwebz</span></button>
+            <div class="content">
+                <h4 style="color: #cccccc;">Description:</h4>
+                <p>Will mark as a spoiler in a non-NSFW channel (will not use spoiler in an NSFW channel).  Use the optional</p>
+                <pre>-c</pre> 
+                <p>or</p> 
+                <pre>--curated</pre>
+                <p>flag to pull randomly from a curated list of butts.</p>
+                <p >If the optional flags are not used then a random booty will be sent from an ever changing list of premium butts.</p>
+                <p>Add a reaction to a response to auto add it to the curated list.</p>
+                <h4 style="color: #cccccc;">Examples:</h4>
+                <pre>!gimmedabutt</pre>
+                <p>
+                    insert image
+                </p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">!newbutt [url]<span> - Add a butt to the curated list</span></button>
+            <div class="content">
+                <h4 style="color: #cccccc;">Description:</h4>
+                <p>Adds a new image/gif/webm to the database (repalce [url] with a valid URL - be sure to add a space after the command).  URLs from Imgur/Red Gifs work best.</p>
+                <p>You can also trigger this function by reacting to an existing post by the bot.</p>
+                <h4 style="color: #cccccc;">Examples:</h4>
+                <pre>!newbutt https/i.imgur.com/bK7Ks5u</pre>
+                <p>
+                    insert image
+                </p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">!delbutt [index]<span> - Remove a butt from the curated list</span></button>
+            <div class="content">
+                <h4 style="color: #cccccc;">Description:</h4>
+                <p>Deletes a butt from the database where [index] is the index in the DB.</p>
+                <h4 style="color: #cccccc;">Examples:</h4>
+                <pre>!delbutt 5</pre>
+                <p>
+                    insert image
+                </p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">!listbutt<span> - List current butts in the curated list</span></button>
+            <div class="content">
+                <h4 style="color: #cccccc;">Description:</h4>
+                <p>Lists all current butt URLs in the database.</p>
+                <h4 style="color: #cccccc;">Examples:</h4>
+                <pre>!listbutt</pre>
+                <p>
+                    insert image
+                </p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">!bootybotcmd<span> - List available commands</span></button>
+            <div class="content">
+                <h4 style="color: #cccccc;">Description:</h4>
+                <p>Provides access to the info here but in Discord 😁</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer class="mastfoot mb-auto">
+        <div class="container-fluid mb-auto">
+          <div class="row d-flex justify-content-center">
+            <div class="">
+              <p style="font-size: 19px; padding: 0px; margin: 0px;"><a href="https://github.com/TODO"
+                  style="text-decoration: none; color: white;">Made with 💖 by 🍑<span style="font-family: 'Permanent Marker', cursive; font-weight: 400">Booty Bot</span>🍑</a></br><span style="font-family: 'Permanent Marker', cursive; font-weight: 400">Booty Bot </span> ©
+                2022. All
+                rights reserved.</br>[<a href="./license.html"><b>Terms Of Use</b></a>]</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
